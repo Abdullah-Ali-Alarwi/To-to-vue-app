@@ -7,7 +7,11 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+<<<<<<< HEAD
   plugins: [vue() ,    tailwindcss()],
+=======
+  plugins: [vue()],
+>>>>>>> e585b4c (change thefile)
   base: '/To-to-vue-app/',
   resolve: {
     alias: {
