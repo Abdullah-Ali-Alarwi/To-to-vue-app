@@ -1,21 +1,33 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
-
-import Home from '@/view/Home.vue';
-import DataPage from '@/view/DataPage.vue';
+import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'Home',
-      component: Home,
+      path: "/",
+      name: "home",  
+      component: () => import("../view/Home.vue"),
     },
     {
-      path: '/DataPage',
-      name: 'Data',
-      component: DataPage,
+      path: "/about", 
+      name: "about",  
+      component: () => import("../view/About.vue"),
     },
+    {
+      path: "/ourservices",  
+      name: "ourservices",  
+      component: () => import("../view/OurServiesPage.vue"),
+    },
+    {
+      path: "/contactus",  
+      name: "contactus",  
+      component: () => import("../view/contactus.vue"),
+    },
+    {
+      path: "/healthcareservies",  
+      name: "healthcareservies",  
+      component: () => import("../view/healthcareservies.vue"),
+    }
   ],
 });
 

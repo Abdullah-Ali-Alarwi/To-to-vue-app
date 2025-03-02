@@ -1,33 +1,137 @@
-body {
-  background-color: rgb(255, 255, 255);
+:root{
+  --main-Color :rgb(65,17,61);
+  --orange :#FFA500; ;
 }
 
-* {
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+ 
+
+
+
+*{
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-}
-body {
-  padding: 1em;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  color: #474444;
-  background-color: #ffffff;
+  text-align: start;
+  /* overflow-x: hidden; */
+  
 }
 
-input {
+body {
+  --s: 300px; /* control the size*/
+  --c1: var(--main-Color);
+  --c2: #f1ad1906;
+  
+  background:
+    repeating-conic-gradient(var(--c1) 0 25%,#0000 0 50%)
+     0 0/calc(4*var(--s)) calc(2*var(--s)),
+    conic-gradient(#0000 50%,var(--c2) 0)
+     calc(var(--s)/2) 0/calc(2*var(--s)) 1%,
+    radial-gradient(var(--c2) 70%,var(--c1) 72%)
+     0 0/var(--s) var(--s);
+}
+
+
+.container{
+margin-left:20px ;
+margin-right:20px ;
+}
+body{
+  background-color: var(--main-Color);
+  color: white;
+ 
+}
+
+.title{
+  color: var(--orange);
+  font-size: 55px;
+  text-align: center;
+  font-weight: bold;
+  text-align: center;
+}
+.sumtitle{
+  color: white;
+  font-size: 32px;
+  text-align: center;
+}
+
+.textContainer{
+  margin: 0 auto;
+  width: 50%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  text-align: center;
+  color: black;
+  width: 40%;
+}
+
+.text-title{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.box{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+flex-wrap: wrap;
+margin: auto;
+}
+
+main{
+  margin-top: 100px;
+
+
+}
+
+
+p .li{
+  font-size: 20px;
+    
+}
+
+
+/* add blure to all image */
+.imgBlur {
+  position: relative;
+  display: block;
+ 
+  height: auto;
+ 
+}
+
+.imgBlur::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 100px;
-  padding: 1em;
-  line-height: 1.4;
-  background-color: #d0f6e7;
-  border: 1px solid #e3d8d8;
-  border-radius: 3px;
-  -webkit-transition: 0.35s ease-in-out;
-  -moz-transition: 0.35s ease-in-out;
-  -o-transition: 0.35s ease-in-out;
-  transition: 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
+  height: 30%;
+  background: inherit;
+  filter: blur(10px);
+  opacity: 0.8;
 }
-input:focus {
-  outline: 0;
-  border-color: #049a02;
+
+.imgBlur {
+
+  height: auto;
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%);
 }
+
+
+@media  screen and (max-width:798px) 
+{
+  .title{
+    font-size:30px !important;
+  }
+}
+
