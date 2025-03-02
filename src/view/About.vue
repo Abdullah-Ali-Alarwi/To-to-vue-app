@@ -18,7 +18,7 @@
  
 
      
-      <team-list  :PresentationTeam="PresentationTeam" :title="PresentationTitle"/>
+      <team-list :PresentationTeam="PresentationTeam" :title="PresentationTitle"/>
       <team-list  :PresentationTeam="MemberData" :title="MemberTitle"/>
       <BranchesVue/>
 
